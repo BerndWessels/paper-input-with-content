@@ -1,0 +1,115 @@
+<!--
+    @license
+    Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    Code distributed by Google as part of the polymer project is also
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+
+  <title>paper-input</title>
+
+  <script src="../webcomponentsjs/webcomponents.js"></script>
+
+  <link href="../font-roboto/roboto.html" rel="import">
+  <link href="paper-input-with-content.html" rel="import">
+
+  <style shim-shadowdom>
+
+    body {
+      font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+      font-size: 14px;
+      margin: 0;
+      padding: 24px;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-touch-callout: none;
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    section > div {
+      padding: 14px;
+      font-size: 16px;
+    }
+
+    paper-input.narrow {
+      width: 150px;
+    }
+
+    paper-input.custom::shadow .label-text,
+    paper-input.custom::shadow .error {
+      color: #f4b400;
+    }
+
+    paper-input.custom::shadow .unfocused-underline {
+      background-color: #f4b400;
+    }
+
+    paper-input.custom[focused]::shadow .floated-label .label-text {
+      color: #0f9d58;
+    }
+
+    paper-input.custom::shadow .focused-underline {
+      background-color: #0f9d58;
+    }
+
+    paper-input.custom::shadow .cursor {
+      background-color: #1a237e;
+    }
+
+    paper-input.custom.invalid[focused]::shadow .floated-label .label-text,
+    paper-input.custom[focused]::shadow .error {
+      color: #f06292;
+    }
+
+    paper-input.custom.invalid::shadow .focused-underline,
+    paper-input.custom.invalid::shadow .cursor {
+      background-color: #f06292;
+    }
+
+    paper-input.custom {
+      color: #1a237e;
+    }
+
+  </style>
+
+</head>
+<body unresolved>
+  <section>
+
+      <paper-input-with-content floatingLabel maxRows="8" label="Single line with floating label" hasContent="true">
+          <span start style="line-height: normal;">Bernd</span>
+          <span start style="line-height: normal;">Wessels</span>
+          <span start style="line-height: normal;">Bernd</span>
+          <span start style="line-height: normal;">Wessels</span>
+          <span start style="line-height: normal;">Bernd</span>
+          <span start style="line-height: normal;">Wessels</span>
+          <span start style="line-height: normal;">Bernd</span>
+          <span start style="line-height: normal;">Wessels</span>
+      </paper-input-with-content>
+
+  </section>
+
+
+  <script>
+
+    document.addEventListener('polymer-ready', function() {
+
+      setTimeout(function() {
+        Array.prototype.forEach.call(document.querySelectorAll('paper-input[hidden]'), function(node) {
+          node.removeAttribute('hidden');
+        });
+      }, 500);
+
+    });
+
+  </script>
+</body>

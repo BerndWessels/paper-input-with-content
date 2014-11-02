@@ -1,0 +1,25 @@
+{
+  "name": "paper-input-with-content",
+  "version": "1.0.0",
+  "authors": [
+    "Bernd Wessels"
+  ],
+  "description": "A paper input with the ability to show additional content before and after the input.",
+  "keywords": [
+    "paper",
+    "input",
+    "content",
+    "polymer",
+    "web-components"
+  ],
+  "homepage": "https://github.com/berndwessels/paper-select",
+  "main": "paper-input-with-content.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#master",
+    "platform": "Polymer/platform#master",
+    "core-icon": "Polymer/core-icon#master",
+    "core-icons": "Polymer/core-icons#master",
+    "core-input": "Polymer/core-input-with-content#master",
+    "core-style": "Polymer/core-style#master"
+  }
+}
