@@ -19,7 +19,7 @@
     "platform": "Polymer/platform#master",
     "core-icon": "Polymer/core-icon#master",
     "core-icons": "Polymer/core-icons#master",
-    "core-input": "Polymer/core-input-with-content#master",
+    "core-input-with-content": "BerndWessels/core-input-with-content#master",
     "core-style": "Polymer/core-style#master"
   }
 }
